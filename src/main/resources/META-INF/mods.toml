@@ -1,0 +1,35 @@
+modLoader="javafml" #mandatory
+loaderVersion="[35,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="All rights reserved"
+
+#issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId = "areaofeffect" #mandatory
+version = "1.0" #mandatory
+
+displayName = "Area of Effect" #mandatory
+#updateJSONURL = "http://myurl.me/" #optional
+#displayURL = "http://example.com/" #optional
+issueTrackerURL="https://github.com/Tavi007/Area-Of-Effect/issues" #optional
+logoFile = "logo.png"
+credits = "Thanks goes to the Forge Forum community." #optional
+authors = "Tavi007" #optional
+
+description='''
+I have to do this later. lol
+'''
+
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.areaofeffect]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[35,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.areaofeffect]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4]"
+    ordering="NONE"
+    side="BOTH"
