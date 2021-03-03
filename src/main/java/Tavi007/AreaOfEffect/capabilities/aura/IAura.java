@@ -14,9 +14,10 @@ public interface IAura {
 	public HashSet<Entity> findEntitiesInRange(World world);
 	public void displayEdge(World world);
 	
-	public void applyEffect(Entity entity);
-	public void removeEffect(Entity entity);
+	// for the effect
+	public void tick(World world);
 	
+	// read/write from world nbt
 	public void writeNBT(CompoundNBT nbt);
 	public void readNBT(CompoundNBT nbt);
 }

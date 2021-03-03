@@ -7,17 +7,16 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class EntityAura implements IAura {
+public class FixedPosAura implements IAura {
+	private final BlockPos pos;
 	
-	Entity entity;
-	
-	public EntityAura(Entity entity) {
-		this.entity = entity;
+	public FixedPosAura(BlockPos pos) {
+		this.pos = pos;
 	}
-
+	
 	@Override
 	public BlockPos getCenter() {
-		return entity.getPosition();
+		return pos;
 	}
 
 	@Override
@@ -33,12 +32,9 @@ public class EntityAura implements IAura {
 
 	@Override
 	public void writeNBT(CompoundNBT nbt) {
-		nbt.putInt("entity_id", entity.getEntityId());
 	}
 
 	@Override
-	public void readNBT(CompoundNBT nbt) {
-		int entityId = nbt.getInt("entity_id");
-	}
+	public void readNBT(CompoundNBT nbt) {}
 	
 }
